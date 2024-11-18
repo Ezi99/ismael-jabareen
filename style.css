@@ -1,0 +1,221 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background: #f4f4f9;
+}
+
+.header {
+  background: #333;
+  color: #fff;
+  padding: 1rem 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.header-sentinel {
+  height: 1rem;
+  width: 100%;
+}
+
+.header.sticky {
+  position: fixed;
+  width: 100%;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+}
+
+.nav-links li {
+  margin-left: 20px;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* Section Styling */
+.section {
+  padding: 10rem 1rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+p {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+#about h1 {
+  margin-top: 3.5rem;
+}
+
+/* Education Section */
+.education-section {
+  padding: 2rem 1rem;
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.education-item {
+  background: #fff;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+#education h1 {
+  margin-top: 4.5rem;
+}
+
+.education-item h2 {
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+}
+
+.education-item p {
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  color: #555;
+}
+
+#projects h1 {
+  margin-top: 0rem;
+}
+/* Projects Section */
+.projects-container {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(300px, 1fr)
+  ); /* Responsive layout */
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.project-card {
+  background: #fff;
+  padding: 1.5rem;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.project-card ul {
+  list-style-type: disc; /* Default bullet points */
+  margin: 1rem 0 0 1.5rem; /* Indent the list slightly */
+  color: #555; /* Muted text color */
+  font-size: 0.9rem; /* Slightly smaller text */
+  text-align: left; /* Align bullets to the left */
+}
+
+.project-card ul li {
+  margin-bottom: 0.5rem; /* Space between bullet points */
+}
+
+.project-card h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.project-card p {
+  color: #555;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.btn {
+  display: inline-block;
+  background: #333;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background: #555;
+}
+
+/* Skills Section */
+.skills-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.skills-list li {
+  background: #333;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+}
+
+/* Contact Section */
+.contact-list {
+  list-style: none;
+  text-align: center;
+  margin-top: 1rem;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 1rem; /* Space between icons */
+}
+
+.contact-item a {
+  color: #333; /* Default icon color */
+  font-size: 2rem; /* Adjust icon size */
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.contact-item a:hover {
+  color: #0077b5; /* Change color on hover (e.g., LinkedIn blue) */
+  transform: scale(1.2); /* Slightly enlarge the icon */
+}
+
+footer {
+  text-align: center;
+  padding: 1rem 0;
+  background: #333;
+  color: #fff;
+}
