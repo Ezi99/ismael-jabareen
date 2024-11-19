@@ -7,4 +7,4 @@ header.addSelectSectionHandler(function (sectionName) {
   }
 });
 
-header.ActivateStickyObserver();
+header.addClickHamburgerHandler(() => header.toggleHiddenNavLinks());
