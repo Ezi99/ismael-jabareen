@@ -18,44 +18,59 @@ function Header() {
 
   return (
     <header className="header">
-      <nav className="nav">
-        <div className="logo">{'{IJ}'} Ismael Jabareen</div>
-        <button className="hamburger" onClick={toggleMenu}>
+      <div className="container">
+        <nav className="nav" aria-label="Primary">
+          <div className="logo">
+            <span className="logo-badge" aria-hidden="true">
+              IJ
+            </span>
+            <span>Ismael Jabareen</span>
+          </div>
+          <button
+            className="hamburger"
+            onClick={toggleMenu}
+            aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
+            aria-expanded={isMenuOpen}
+          >
           <span></span>
           <span></span>
           <span></span>
-        </button>
-        <ul className={`nav-links ${isMenuOpen ? 'show' : ''}`}>
-          <li>
-            <a href="#about" onClick={(e) => handleNavClick(e, '#about')}>
-              About
-            </a>
-          </li>
-          <li>
-            <a
-              href="#education"
-              onClick={(e) => handleNavClick(e, '#education')}
-            >
-              Education
-            </a>
-          </li>
-          <li>
-            <a href="#projects" onClick={(e) => handleNavClick(e, '#projects')}>
-              Projects
-            </a>
-          </li>
-          <li>
-            <a href="#skills" onClick={(e) => handleNavClick(e, '#skills')}>
-              Skills
-            </a>
-          </li>
-          <li>
-            <a href="#contact" onClick={(e) => handleNavClick(e, '#contact')}>
-              Contact
-            </a>
-          </li>
-        </ul>
-      </nav>
+          </button>
+          <ul className={`nav-links ${isMenuOpen ? 'show' : ''}`}>
+            <li>
+              <a href="#about" onClick={(e) => handleNavClick(e, '#about')}>
+                About
+              </a>
+            </li>
+            <li>
+              <a
+                href="#education"
+                onClick={(e) => handleNavClick(e, '#education')}
+              >
+                Education
+              </a>
+            </li>
+            <li>
+              <a
+                href="#projects"
+                onClick={(e) => handleNavClick(e, '#projects')}
+              >
+                Projects
+              </a>
+            </li>
+            <li>
+              <a href="#skills" onClick={(e) => handleNavClick(e, '#skills')}>
+                Skills
+              </a>
+            </li>
+            <li>
+              <a href="#contact" onClick={(e) => handleNavClick(e, '#contact')}>
+                Contact
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </header>
   )
 }

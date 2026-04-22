@@ -9,13 +9,14 @@ import Footer from './components/Footer'
 function App() {
   return (
     <>
-      <div className="header-sentinel"></div>
       <Header />
-      <About />
-      <Education />
-      <Projects />
-      <Skills />
-      <Contact />
+      <main>
+        <About />
+        <Education />
+        <Projects />
+        <Skills />
+        <Contact />
+      </main>
       <Footer />
     </>
   )

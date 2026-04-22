@@ -38,27 +38,38 @@ function Projects() {
 
   return (
     <section id="projects" className="section">
-      <h1>Projects</h1>
-      <div className="projects-container">
-        {projects.map((project, index) => (
-          <div key={index} className="project-card">
-            <h2>{project.title}</h2>
-            <p>{project.description}</p>
-            <ul>
-              {project.features.map((feature, featureIndex) => (
-                <li key={featureIndex}>{feature}</li>
-              ))}
-            </ul>
-            <a
-              href={project.githubUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn"
-            >
-              View on GitHub
-            </a>
-          </div>
-        ))}
+      <div className="container">
+        <div className="section-header">
+          <div className="section-kicker">Work</div>
+          <h2 className="section-title">Projects</h2>
+          <p className="section-lead">
+            A few things I’ve built—ranging from VR gameplay to web apps.
+          </p>
+        </div>
+
+        <div className="projects-container">
+          {projects.map((project, index) => (
+            <div key={index} className="card project-card">
+              <div className="card-title">{project.title}</div>
+              <p>{project.description}</p>
+              <ul>
+                {project.features.map((feature, featureIndex) => (
+                  <li key={featureIndex}>{feature}</li>
+                ))}
+              </ul>
+              <div style={{ marginTop: 14 }}>
+                <a
+                  href={project.githubUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn"
+                >
+                  View on GitHub
+                </a>
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   )
