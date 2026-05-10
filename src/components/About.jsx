@@ -9,14 +9,16 @@ function About() {
               experiences.
             </h1>
             <p className="hero-subtitle">
-              Hello there! I'm a Computer Science graduate with a passion for
-              creating and tackling challenges head-on. I'm a dedicated
-              self-learner who constantly explores new technologies and enhances
-              my skillset, whether through online courses or hands-on projects.
-              I enjoy solving problems independently but also recognize the
-              value of collaboration and know when to seek help from colleagues
-              or resources. I'm eager to take my first step in the high-tech
-              industry and contribute to meaningful projects.
+              Sr Associate Technical Support Delivery Analyst at Workday with a
+              strong
+              software development background and hands-on experience in
+              production systems, troubleshooting, logs, APIs, MongoDB, and YAML
+              configurations.
+              <br />
+              <br />
+              I enjoy building reliable software, debugging complex issues, and
+              understanding how applications behave from development to
+              production.
             </p>
             <div className="hero-actions">
               <a className="btn btn-primary" href="#projects">
@@ -32,15 +34,15 @@ function About() {
             <div className="meta">
               <div>
                 <strong>Focus</strong>
-                <div>Frontend • Backend • Game/VR</div>
+                <div>Software Development • Production Systems • Game/VR</div>
+              </div>
+              <div>
+                <strong>Technical Work</strong>
+                <div>Debugging, log analysis, APIs, MongoDB, YAML configurations</div>
               </div>
               <div>
                 <strong>Strengths</strong>
-                <div>Problem-solving, self-learning, teamwork</div>
-              </div>
-              <div>
-                <strong>Looking for</strong>
-                <div>First role in the high-tech industry</div>
+                <div>Ownership, documentation, problem-solving, communication</div>
               </div>
             </div>
           </aside>

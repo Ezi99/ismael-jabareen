@@ -1,17 +1,20 @@
 function Skills() {
   const skills = [
-    'Java',
-    'JavaScript',
-    'C#',
-    'SQL',
-    'C',
-    'C++',
-    'PostgreSQL',
-    'Unity',
-    'Postman',
-    'Jenkins',
-    'Git & GitHub',
-  ]
+    "Java",
+    "JavaScript",
+    "C#",
+    "SQL",
+    "MongoDB",
+    "PostgreSQL",
+    "REST APIs",
+    "YAML",
+    "Kibana",
+    "Groundcover",
+    "Postman",
+    "Jenkins",
+    "Git & GitHub",
+    "Unity",
+  ];
 
   return (
     <section id="skills" className="section">
@@ -31,8 +34,7 @@ function Skills() {
         </ul>
       </div>
     </section>
-  )
+  );
 }
 
-export default Skills
-
+export default Skills;

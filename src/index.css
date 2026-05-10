@@ -310,6 +310,16 @@ a {
   margin: 6px 0;
 }
 
+/* Experience */
+.experience-card ul {
+  margin: 12px 0 0 18px;
+  color: var(--muted);
+}
+
+.experience-card ul li {
+  margin: 6px 0;
+}
+
 /* Skills */
 .skills-list {
   list-style: none;

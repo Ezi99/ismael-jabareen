@@ -1,7 +1,9 @@
 function Footer() {
+  const year = new Date().getFullYear()
+
   return (
     <footer>
-      <p>© 2024 Ismael Jabareen. All Rights Reserved.</p>
+      <p>© {year} Ismael Jabareen. All Rights Reserved.</p>
     </footer>
   )
 }
