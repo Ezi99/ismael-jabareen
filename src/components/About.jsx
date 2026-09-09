@@ -3,7 +3,7 @@ function About() {
     <section id="about" className="hero">
       <div className="container">
         <div className="hero-grid">
-          <div>
+          <div data-reveal>
             <h1 className="hero-title">
               Building <strong>clean, reliable</strong> software and interactive
               experiences.
@@ -30,7 +30,12 @@ function About() {
             </div>
           </div>
 
-          <aside className="hero-card" aria-label="Quick info">
+          <aside
+            className="hero-card"
+            aria-label="Quick info"
+            data-reveal
+            style={{ '--reveal-delay': '140ms' }}
+          >
             <div className="meta">
               <div>
                 <strong>Focus</strong>
@@ -53,4 +58,3 @@ function About() {
 }
 
 export default About
-

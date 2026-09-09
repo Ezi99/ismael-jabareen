@@ -38,8 +38,8 @@ function Projects() {
 
   return (
     <section id="projects" className="section">
-      <div className="container">
-        <div className="section-header">
+      <div className="container section-grid">
+        <div className="section-header" data-reveal>
           <div className="section-kicker">Work</div>
           <h2 className="section-title">Projects</h2>
           <p className="section-lead">
@@ -49,7 +49,12 @@ function Projects() {
 
         <div className="projects-container">
           {projects.map((project, index) => (
-            <div key={index} className="card project-card">
+            <div
+              key={index}
+              className="card project-card"
+              data-reveal
+              style={{ '--reveal-delay': `${index * 90}ms` }}
+            >
               <div className="card-title">{project.title}</div>
               <p>{project.description}</p>
               <ul>
@@ -57,16 +62,14 @@ function Projects() {
                   <li key={featureIndex}>{feature}</li>
                 ))}
               </ul>
-              <div style={{ marginTop: 14 }}>
-                <a
-                  href={project.githubUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="btn"
-                >
-                  View on GitHub
-                </a>
-              </div>
+              <a
+                href={project.githubUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn project-link"
+              >
+                View on GitHub
+              </a>
             </div>
           ))}
         </div>
@@ -76,4 +79,3 @@ function Projects() {
 }
 
 export default Projects
-

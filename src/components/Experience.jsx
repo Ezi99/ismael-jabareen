@@ -13,8 +13,8 @@ function Experience() {
 
   return (
     <section id="experience" className="section">
-      <div className="container">
-        <div className="section-header">
+      <div className="container section-grid">
+        <div className="section-header" data-reveal>
           <div className="section-kicker">Career</div>
           <h2 className="section-title">Experience</h2>
           <p className="section-lead">
@@ -23,16 +23,18 @@ function Experience() {
           </p>
         </div>
 
-        <div className="card experience-card">
-          <div className="card-title">Sr Associate Technical Support Delivery Analyst</div>
-          <p>
-            <strong>Workday</strong> · 2025 – Present
-          </p>
-          <ul>
-            {highlights.map((item, index) => (
-              <li key={index}>{item}</li>
-            ))}
-          </ul>
+        <div className="section-body">
+          <div className="card" data-reveal>
+            <div className="card-title">Sr Associate Technical Support Delivery Analyst</div>
+            <p className="card-meta">
+              <strong>Workday</strong> · 2025 – Present
+            </p>
+            <ul>
+              {highlights.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </div>
         </div>
       </div>
     </section>
@@ -40,4 +42,3 @@ function Experience() {
 }
 
 export default Experience
-

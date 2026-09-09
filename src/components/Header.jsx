@@ -1,7 +1,34 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
+
+const NAV_ITEMS = [
+  { id: 'about', label: 'About' },
+  { id: 'education', label: 'Education' },
+  { id: 'experience', label: 'Experience' },
+  { id: 'projects', label: 'Projects' },
+  { id: 'skills', label: 'Skills' },
+  { id: 'contact', label: 'Contact' },
+]
 
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [activeId, setActiveId] = useState('about')
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const visible = entries.find((entry) => entry.isIntersecting)
+        if (visible) setActiveId(visible.target.id)
+      },
+      { rootMargin: '-45% 0px -50% 0px' }
+    )
+
+    NAV_ITEMS.forEach(({ id }) => {
+      const section = document.getElementById(id)
+      if (section) observer.observe(section)
+    })
+
+    return () => observer.disconnect()
+  }, [])
 
   const handleNavClick = (e, sectionId) => {
     e.preventDefault()
@@ -27,55 +54,29 @@ function Header() {
             <span>Ismael Jabareen</span>
           </div>
           <button
-            className="hamburger"
+            className={`hamburger ${isMenuOpen ? 'is-open' : ''}`}
             onClick={toggleMenu}
             aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
             aria-expanded={isMenuOpen}
+            aria-controls="primary-nav"
           >
-          <span></span>
-          <span></span>
-          <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
           </button>
-          <ul className={`nav-links ${isMenuOpen ? 'show' : ''}`}>
-            <li>
-              <a href="#about" onClick={(e) => handleNavClick(e, '#about')}>
-                About
-              </a>
-            </li>
-            <li>
-              <a
-                href="#education"
-                onClick={(e) => handleNavClick(e, '#education')}
-              >
-                Education
-              </a>
-            </li>
-            <li>
-              <a
-                href="#experience"
-                onClick={(e) => handleNavClick(e, '#experience')}
-              >
-                Experience
-              </a>
-            </li>
-            <li>
-              <a
-                href="#projects"
-                onClick={(e) => handleNavClick(e, '#projects')}
-              >
-                Projects
-              </a>
-            </li>
-            <li>
-              <a href="#skills" onClick={(e) => handleNavClick(e, '#skills')}>
-                Skills
-              </a>
-            </li>
-            <li>
-              <a href="#contact" onClick={(e) => handleNavClick(e, '#contact')}>
-                Contact
-              </a>
-            </li>
+          <ul id="primary-nav" className={`nav-links ${isMenuOpen ? 'show' : ''}`}>
+            {NAV_ITEMS.map(({ id, label }) => (
+              <li key={id}>
+                <a
+                  href={`#${id}`}
+                  className={activeId === id ? 'is-active' : ''}
+                  aria-current={activeId === id ? 'true' : undefined}
+                  onClick={(e) => handleNavClick(e, `#${id}`)}
+                >
+                  {label}
+                </a>
+              </li>
+            ))}
           </ul>
         </nav>
       </div>
@@ -84,4 +85,3 @@ function Header() {
 }
 
 export default Header
-

@@ -18,8 +18,8 @@ function Skills() {
 
   return (
     <section id="skills" className="section">
-      <div className="container">
-        <div className="section-header">
+      <div className="container section-grid">
+        <div className="section-header" data-reveal>
           <div className="section-kicker">Toolbox</div>
           <h2 className="section-title">Skills</h2>
           <p className="section-lead">
@@ -27,11 +27,13 @@ function Skills() {
           </p>
         </div>
 
-        <ul className="skills-list">
-          {skills.map((skill, index) => (
-            <li key={index}>{skill}</li>
-          ))}
-        </ul>
+        <div className="section-body">
+          <ul className="skills-list" data-reveal>
+            {skills.map((skill, index) => (
+              <li key={index}>{skill}</li>
+            ))}
+          </ul>
+        </div>
       </div>
     </section>
   );
